@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Footbal extends Player{
+	
+	private int goals;
+	private String position;
+		
+	public Footbal(Scanner sc) {
+		super(sc);
+		System.out.println("Enter number of Goals");
+		int goals=sc.nextInt();
+		
+		System.out.println("Enter position");
+		String position=sc.next();
+		
+		this.goals = goals;
+		this.position = position;
+	}
+
+
+	void displayFootbalStats() {
+		super.displayInfo();
+		System.out.println("no of goals "+this.goals);
+		System.out.println("no of goals "+this.position);
+	}
+}
