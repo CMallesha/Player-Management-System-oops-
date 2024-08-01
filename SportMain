@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class SportMain {
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		while(true) {
+		System.out.println("===Welcome to Sport App===");
+		System.out.println("Press 1:Cricket Player");
+		System.out.println("Press 1:Football Player");
+		System.out.println("Press 3: Exit");
+		int n=sc.nextInt();	
+		
+		switch(n) {
+		case 1:
+			System.out.println("------Enter the details of cricket playrer-----");
+	        Cricket c=new Cricket(sc);
+	        c.diplayCricketststs();
+	        break;
+	        
+		case 2:
+			System.out.println("------Enter the details of football playrer-----");
+	        Footbal f=new Footbal(sc);
+	        f.displayFootbalStats();
+	        break;
+	        
+		case 3:
+			System.out.println("======THANK YOU! VISIT AGAIN=========");
+			sc.close();
+			System.exit(0);
+			break;
+			
+	    default:
+	    	System.out.println("Enter the valid Choice");
+	    	break; 
+	    	
+		}
+     }
+	}	
+}
