@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Cricket extends Player {
+	
+	private int wickets;
+	private int runs;
+		
+	public Cricket(Scanner sc) {
+		super(sc);
+		System.out.println("Enter number of wickets");
+		int wickets=sc.nextInt();
+		
+		System.out.println("Enter number of runs");
+		int runs=sc.nextInt();
+		
+		this.wickets = wickets;
+		this.runs = runs;
+	}
+
+	void diplayCricketststs()
+	{
+		super.displayInfo();
+		System.out.println("no of wickets "+this.wickets);
+		System.out.println("no of runs "+this.runs);
+		
+	}
+	
+}
